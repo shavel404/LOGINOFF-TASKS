@@ -1,0 +1,46 @@
+
+
+<input id = "val1">
+<select id="operation">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+<input id = "val2"/>
+<button id="count">=</button>
+<input id="result"/>
+
+
+<script>
+
+  document.getElementById('count').onclick = ()=>{
+
+    let val1 = parseFloat(document.getElementById("val1").value)
+    let val2 = parseFloat(document.getElementById("val2").value)
+
+    let result = 0
+
+   switch (document.getElementById('operation').value){
+     case '+':
+       result = val1+val2
+       break
+     case '-':
+       result = val1-val2
+     break
+     case '*':
+       result = val1*val2
+     break
+     case '/':
+       result = val1/val2
+     break
+   }
+
+    document.getElementById('result').value = result
+
+  }
+
+</script>
+
+
+
